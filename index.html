@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive sur mobile -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Compatibilité IE -->
+    <title>Portofolio</title> <!-- Titre de la page -->
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers la feuille de style principale -->
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'> <!-- Icônes Boxicons -->
+</head>
+<body>
+    <!-- Barre d'en-tête avec logo et navigation -->
+    <header class="header">
+        <a href="#" class="logo">Portofolio</a> <!-- Logo du site -->
+        <nav class="navbar">
+            <!-- Liens de navigation, chaque lien a une variable CSS --i pour l'animation -->
+            <a href="#home" style="--i:1;" class="active">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#services" style="--i:3;">Services</a>
+            <a href="#portfolio" style="--i:4;">Portfolio</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+        </nav>
+    </header>
+    <!-- Section d'accueil principale -->
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, I'm</h3> <!-- Sous-titre de bienvenue -->
+            <h1>Johnny Mdh</h1> <!-- Nom principal -->
+            <!-- Span utilisé par Typed.js pour afficher du texte dynamique -->
+            <h3>And I'm a <span class="typing"></span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Description -->
+            <!-- Icônes des réseaux sociaux avec animation (variable --i) -->
+            <div class="social-media">
+                <a href="#" style="--i:7"><i class='bxl bx-facebook'></i></a>
+                <a href="#" style="--i:8"><i class='bxl bx-twitter'></i></a>
+                <a href="#" style="--i:9"><i class='bxl bx-instagram'></i></a>
+                <a href="#" style="--i:10"><i class='bxl bx-linkedin'></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a> <!-- Bouton pour télécharger le CV -->
+        </div>
+        <div class="home-img">
+            <img src="jo.png"> <!-- Image de profil -->
+        </div>
+    </section>
+    <!-- Scripts pour Typed.js (texte animé) et script personnalisé -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+</html>

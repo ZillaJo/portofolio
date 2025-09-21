@@ -1,0 +1,238 @@
+/* Importation de la police Poppins depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Réinitialisation des marges, paddings et box-sizing pour tous les éléments */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style général du body : fond sombre et texte blanc */
+body {
+    background-color: #091933;
+    color: #fff;
+}
+
+/* Barre d'en-tête fixée en haut de la page */
+.header {
+    position: fixed; /* Fixe l'élément en haut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex; /* Alignement horizontal des enfants */
+    justify-content: space-between;
+    z-index: 100; /* Priorité d'affichage */
+}
+
+/* Style du logo */
+.logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    font-weight: 700; 
+    cursor: default;
+    opacity: 0; /* Invisible au départ */
+    animation: slideRight 1s forwards; /* Animation d'apparition */
+}
+
+/* Liens de navigation */
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 35px;
+    font-weight: 500;
+    transition: .3s;
+    opacity: 0; /* Invisible au départ */
+    animation: slideTop .5s forwards;
+    animation-delay: calc(.2s * var(--i)); /* Décalage d'animation pour chaque lien */
+}
+
+/* Effet survol et lien actif */
+.navbar a:hover, 
+.navbar a.active{
+    color: #0ef; /* Bleu clair */
+}
+
+/* Section d'accueil centrée verticalement et horizontalement */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+/* Contenu principal de la section accueil */
+.home-content {
+    max-width: 600px;
+}
+
+/* Titre principal animé */
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0; 
+    animation: slideRight 1s forwards;
+    animation-delay: 1s;
+}
+
+/* Sous-titre animé */
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s forwards;
+    animation-delay: .7s;
+}
+
+/* Deuxième sous-titre avec animation différente */
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s forwards;
+    animation-delay: .7s;
+}
+
+/* Mise en avant du texte dans le sous-titre */
+.home-content h3 span {
+    color: #0ef;
+}
+
+/* Paragraphe animé */
+.home-content p {
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Image de profil animée et flottante */
+.home-img img{
+    max-width: 450px;
+    height: 560px;
+    margin-right: -20px;
+    border-radius: 50%; /* Image ronde */
+    opacity: 0;
+    animation: slideLeft 1s ease forwards, floatImage 3s ease-in-out infinite;
+    animation-delay: 2s, 3s; /* Délai pour chaque animation */
+}
+
+/* Icônes des réseaux sociaux animées */
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%; /* Icône ronde */
+    font-size: 20px;
+    color: #0ef;    
+    text-decoration: none;
+    margin : 30px 30px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i)); /* Décalage d'animation pour chaque icône */
+}
+
+/* Effet survol sur les icônes */
+.social-media a:hover {
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0  20px #0ef;
+}
+
+/* Bouton principal animé */
+.btn {
+    display: inline-block;
+    background: #0ef;
+    color: #1f242d;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0ef;
+    letter-spacing: 1px;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+
+/* Animations personnalisées */
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomin {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation pour faire flotter l'image de profil */
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+}
