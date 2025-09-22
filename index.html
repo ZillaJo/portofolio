@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive sur mobile -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Compatibilité IE -->
-    <title>Portofolio</title> <!-- Titre de la page -->
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers la feuille de style principale -->
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for mobile devices -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- IE compatibility -->
+    <title>Portofolio</title> <!-- Page title -->
+    <link rel="stylesheet" href="style.css"> <!-- Main stylesheet -->
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'> <!-- Icônes Boxicons -->
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'> <!-- Boxicons icons -->
 </head>
 <body>
-    <!-- Barre d'en-tête avec logo et navigation -->
+    <!-- Header bar with logo and navigation -->
     <header class="header">
-        <a href="#" class="logo">Portofolio</a> <!-- Logo du site -->
+        <a href="#" class="logo">Portofolio</a> <!-- Site logo -->
 
-        <i class='bx bx-menu' id="menu-icon"></i> <!-- Icône de menu pour mobile -->
+        <i class='bxr bx-menu' id="menu-icon"></i> <!-- Mobile menu icon -->
 
         <nav class="navbar">
-            <!-- Liens de navigation, chaque lien a une variable CSS --i pour l'animation -->
+            <!-- Navigation links, each link uses CSS variable --i for animation -->
             <a href="#home" style="--i:1;" class="active">Home</a>
             <a href="#about" style="--i:2;">About</a>
             <a href="#services" style="--i:3;">Services</a>
@@ -25,65 +25,69 @@
             <a href="#contact" style="--i:5;">Contact</a>
         </nav>
     </header>
-    <!-- Section d'accueil principale -->
+    <!-- Main home section -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello, I'm</h3> <!-- Sous-titre de bienvenue -->
-            <h1>Johnny Mdh</h1> <!-- Nom principal -->
-            <!-- Span utilisé par Typed.js pour afficher du texte dynamique -->
+            <h3>Hello, I'm</h3> <!-- Welcome subtitle -->
+            <h1>Johnny Mdh</h1> <!-- Main name -->
+            <!-- Span used by Typed.js for dynamic text -->
             <h3>And I'm a <span class="typing"></span></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Description -->
-            <!-- Icônes des réseaux sociaux avec animation (variable --i) -->
+            <!-- Social media icons with animation (variable --i) -->
             <div class="social-media">
                 <a href="#" style="--i:7"><i class='bxl bx-facebook'></i></a>
                 <a href="#" style="--i:8"><i class='bxl bx-twitter'></i></a>
                 <a href="#" style="--i:9"><i class='bxl bx-instagram'></i></a>
                 <a href="#" style="--i:10"><i class='bxl bx-linkedin'></i></a>
             </div>
-            <a href="#" class="btn">Download CV</a> <!-- Bouton pour télécharger le CV -->
+            <a href="#" class="btn">Download CV</a> <!-- Button to download CV -->
         </div>
         <div class="home-img">
-            <img src="jo.png"> <!-- Image de profil -->
+            <img src="jo.png"> <!-- Profile image -->
         </div>
     </section>
+    <!-- About section -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="jo.png" alt=""> <!-- Image de la section "About Me" -->
+            <img src="jo.png" alt=""> <!-- About Me image -->
         </div>
         <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2> <!-- Titre de la section -->
-            <h3>I'm Johnny Mdh</h3> <!-- Sous-titre -->
+            <h2 class="heading">About <span>Me</span></h2> <!-- Section title -->
+            <h3>I'm Johnny Mdh</h3> <!-- Subtitle -->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellendus dicta nostrum adipisci enim nisi culpa. Iusto nam vel nulla quos tenetur suscipit, labore excepturi temporibus, blanditiis, omnis aperiam fugiat.</p> <!-- Description -->
-            <a href="#" class="btn">Read More</a> <!-- Bouton pour télécharger le CV -->
+            <a href="#" class="btn">Read More</a> <!-- Button to read more -->
     </section>
 
+    <!-- Services section -->
     <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2> <!-- Titre de la section -->
+        <h2 class="heading">My <span>Services</span></h2> <!-- Section title -->
         <div class="services-container">
             <div class="service-box">
-                <i class='bxr  bx-code-alt'  ></i>  <!-- Icône du service -->
-                <h3>Web Development</h3> <!-- Titre du service -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Description du service -->
+                <i class='bxr  bx-code-alt'  ></i>  <!-- Service icon -->
+                <h3>Web Development</h3> <!-- Service title -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Service description -->
                 <a href="" class="btn">Read More</a>
             </div>
             
             <div class="service-box">
-                <i class='bxr  bx-brush'  ></i>  <!-- Icône du service -->
-                <h3>Graphic Design</h3> <!-- Titre du service -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Description du service -->
+                <i class='bxr  bx-brush'  ></i>  <!-- Service icon -->
+                <h3>Graphic Design</h3> <!-- Service title -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Service description -->
                 <a href="" class="btn">Read More</a>
             </div>
             <div class="service-box">
-                <i class='bxr  bx-chart-trend'  ></i>  <!-- Icône du service -->
-                <h3>Digital Marketing</h3> <!-- Titre du service -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Description du service -->
+                <i class='bxr  bx-chart-trend'  ></i>  <!-- Service icon -->
+                <h3>Digital Marketing</h3> <!-- Service title -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Service description -->
                 <a href="" class="btn">Read More</a>
             </div>
         </div>
     </section>
+    <!-- Portfolio section -->
     <section class="portofolio" id="portfolio">
         <h2 class="heading">Latest <span>Project</span></h2>
         <div class="portofolio-container">
+            <!-- Portfolio project boxes -->
             <div class="portofolio-box">
                 <img src="portofolio.jpeg" alt="">
                 <div class="portofolio-layer">
@@ -133,12 +137,11 @@
                 </div>
             </div>
         </div>
-
     </section>
 
+    <!-- Contact section -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-
         <form action="#">
             <div class="input-box">
                 <input type="text" placeholder="Full Name">
@@ -146,33 +149,33 @@
             </div>
             <div class="input-box">
                 <input type="number" placeholder="Phone">
-                <input type="text" placeholder="Email Subject  ">
-
+                <input type="text" placeholder="Email Subject">
             </div>
             <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
-        
     </section>
-<!-- footer -->
-<footer class="footer">
-  <div class="footer-left">
-    <p>&copy; 2025 Johnny | All Rights Reserved.</p>
-  </div>
-  <div class="footer-right">
-    <a href="#"><i class="bxl bx-twitter"></i></a>
-    <a href="#"><i class="bxl bx-facebook"></i></a>
-    <a href="#"><i class="bxl bx-github"></i></a>
-    <a href="#"><i class="bxl bx-linkedin"></i></a>
-  </div>
-  <div class="footer-iconTop">
-    <a href="#top"><i class='bxr  bx-arrow-up-stroke'></i> </a>
-  </div>
-</footer>  
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="footer-left">
+        <p>&copy; 2025 Johnny | All Rights Reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#"><i class="bxl bx-twitter"></i></a>
+        <a href="#"><i class="bxl bx-facebook"></i></a>
+        <a href="#"><i class="bxl bx-github"></i></a>
+        <a href="#"><i class="bxl bx-linkedin"></i></a>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#top"><i class='bxr  bx-arrow-up-stroke'></i> </a>
+      </div>
+    </footer>  
 
-
-    <!-- Scripts pour Typed.js (texte animé) et script personnalisé -->
+    <!-- Scripts for Typed.js (animated text) and custom script -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Custom script file -->
     <script src="script.js"></script>
 </body>
 </html>

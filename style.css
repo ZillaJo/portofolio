@@ -1,7 +1,7 @@
-/* Importation de la police Poppins depuis Google Fonts */
+/* Import Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Réinitialisation des marges, paddings et box-sizing pour tous les éléments */
+/* Reset margin, padding, box-sizing for all elements */
 *{
     margin: 0;
     padding: 0;
@@ -13,44 +13,55 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Define CSS variables for colors */
 :root {
-    --bg-color: #1f242d; /* Couleur principale*/
-    --secondary-color: #323946; /* Couleur secondaire */
-    --text-color: #fff; /* Couleur du texte (blanc) */
-    --main-color: #0ef; /* Couleur d'accentuation (bleu clair) */
+    --bg-color: #1f242d; /* Main background color */
+    --secondary-color: #323946; /* Secondary background color */
+    --text-color: #fff; /* Text color (white) */
+    --main-color: #0ef; /* Accent color (light blue) */
 }
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-/* Style général du body : fond sombre et texte blanc */
+/* General body style: dark background and white text */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
+/* Section styling */
 section{
     main-height: 100vh;
-    padding: 10rem 9% 2rem; /* Espace autour du contenu */
+    padding: 10rem 9% 2rem; /* Spacing around content */
 }
 
-/* Barre d'en-tête fixée en haut de la page */
+/* Fixed header bar at the top */
 .header {
-    position: fixed; /* Fixe l'élément en haut */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 2rem 9%;
     background: var(--bg-color);
-    display: flex; /* Alignement horizontal des enfants */
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 10px var(--bg-color); /* Ombre portée */
-    z-index: 100; /* Priorité d'affichage */
+    box-shadow: 0 0 10px var(--bg-color);
+    z-index: 100;
 }
 
-/* Style du logo */
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+    background: var(--secondary-color);
+    box-shadow: 0 0 10px var(--main-color);
+    padding: 1rem 9%;
+    transition: .5s ease;
+}
+
+/* Logo styling */
 .logo {
     color: var(--text-color);
     font-size: 2.5rem;
@@ -58,11 +69,11 @@ section{
     text-decoration: none;
     font-weight: 700; 
     cursor: default;
-    opacity: 0; /* Invisible au départ */
-    animation: slideRight 1s forwards; /* Animation d'apparition */
+    opacity: 0; /* Initially hidden */
+    animation: slideRight 1s forwards; /* Slide-in animation */
 }
 
-/* Liens de navigation */
+/* Navigation links */
 .navbar a{
     display: inline-block;
     font-size: 1.7rem;
@@ -71,25 +82,26 @@ section{
     margin-left: 4rem;
     font-weight: 500;
     transition: .3s;
-    opacity: 0; /* Invisible au départ */
+    opacity: 0; /* Initially hidden */
     animation: slideTop .5s forwards;
-    animation-delay: calc(.2s * var(--i)); /* Décalage d'animation pour chaque lien */
+    animation-delay: calc(.2s * var(--i)); /* Staggered animation delay */
 }
 
-/* Effet survol et lien actif */
+/* Hover and active link effect */
 .navbar a:hover, 
 .navbar a.active{
-    color: var(--main-color); /* Bleu clair */
+    color: var(--main-color); /* Light blue */
 }
 
+/* Menu icon for mobile */
 #menu-icon{
     font-size: 3.6rem;
     color: var(--text-color);
-    display: none;/* Caché par défaut*/
+    display: none; /* Hidden by default */
     cursor: pointer;
 }
 
-/* Section d'accueil centrée verticalement et horizontalement */
+/* Home section centered vertically and horizontally */
 .home {
     position: relative;
     width: 100%;
@@ -100,12 +112,12 @@ section{
     padding: 70px 10% 0;
 }
 
-/* Contenu principal de la section accueil */
+/* Main content in home section */
 .home-content {
     max-width: 600px;
 }
 
-/* Titre principal animé */
+/* Animated main title */
 .home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
@@ -116,7 +128,7 @@ section{
     animation-delay: 1s;
 }
 
-/* Sous-titre animé */
+/* Animated subtitle */
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
@@ -125,19 +137,19 @@ section{
     animation-delay: .7s;
 }
 
-/* Deuxième sous-titre avec animation différente */
+/* Second subtitle with different animation */
 .home-content h3:nth-of-type(2) {
     margin-bottom: 30px;
     animation: slideTop 1s forwards;
     animation-delay: .7s;
 }
 
-/* Mise en avant du texte dans le sous-titre */
+/* Highlighted text in subtitle */
 .home-content h3 span {
     color: #0ef;
 }
 
-/* Paragraphe animé */
+/* Animated paragraph */
 .home-content p {
     font-size: 16px;
     opacity: 0;
@@ -145,18 +157,18 @@ section{
     animation-delay: 1s;
 }
 
-/* Image de profil animée et flottante */
+/* Animated and floating profile image */
 .home-img img{
     max-width: 450px;
     height: 560px;
     margin-right: -20px;
-    border-radius: 35%; /* Image ronde */
+    border-radius: 35%; /* Rounded image */
     opacity: 0;
     animation: slideLeft 1s ease forwards, floatImage 3s ease-in-out infinite;
-    animation-delay: 2s, 3s; /* Délai pour chaque animation */
+    animation-delay: 2s, 3s; /* Delay for each animation */
 }
 
-/* Icônes des réseaux sociaux animées */
+/* Animated social media icons */
 .social-media a{
     display: inline-flex;
     justify-content: center;
@@ -165,7 +177,7 @@ section{
     height: 40px;
     background: transparent;
     border: 2px solid #0ef;
-    border-radius: 50%; /* Icône ronde */
+    border-radius: 50%; /* Round icon */
     font-size: 20px;
     color: #0ef;    
     text-decoration: none;
@@ -173,17 +185,17 @@ section{
     transition: .5s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var(--i)); /* Décalage d'animation pour chaque icône */
+    animation-delay: calc(.2s * var(--i)); /* Staggered animation delay */
 }
 
-/* Effet survol sur les icônes */
+/* Hover effect on social icons */
 .social-media a:hover {
     background: #0ef;
     color: #1f242d;
     box-shadow: 0 0  20px #0ef;
 }
 
-/* Bouton principal animé */
+/* Animated main button */
 .btn {
     display: inline-block;
     background: #0ef;
@@ -206,7 +218,8 @@ section{
     color: #0ef;
     box-shadow: 0 0 20px #0ef;
 }
-/* about */
+
+/* About section */
 .about{
     display: flex;
     align-items: center;
@@ -220,16 +233,17 @@ section{
     height: 900px;
     margin-right: -20px;
     padding: 50px;
-
 }
+
 .heading {
     text-align: center;
     font-size: 4.5rem;
- }
+}
 
 .heading span {
     color: var(--main-color);
 }
+
 .about-content h2{
     text-align: left;
     line-height: 1.2;
@@ -244,6 +258,7 @@ section{
     margin: 2rem 0 3rem;
 }
 
+/* Services section */
 .services h2{
     /* text-align: center;
     font-size: 4.5rem; */
@@ -265,8 +280,8 @@ section{
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
-    
 }
+
 .services-container .service-box:hover{
     border-color: var(--main-color);
     box-shadow: 0 0 20px var(--main-color);
@@ -289,9 +304,9 @@ section{
     margin: 1rem 0 2rem;
 }
 
+/* Portfolio section */
 .portofolio {
     background: var(--secondary-color);
-
 }
 .portofolio h2{
     text-align: center;
@@ -362,6 +377,7 @@ section{
     font-size: 3rem;
 }
 
+/* Contact section */
 .contact h2{
     /* text-align: center;
     font-size: 4.5rem; */
@@ -401,7 +417,7 @@ section{
     cursor: pointer;
 }
 
-/* ...existing code... */
+/* Footer styles */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -461,7 +477,7 @@ section{
     color: var(--secondary-color);
 }
 
-/* Animations personnalisées */
+/* Custom animations */
 @keyframes slideRight {
     0% {
         opacity: 0;
@@ -517,12 +533,189 @@ section{
     }
 }
 
-/* Animation pour faire flotter l'image de profil */
+/* Animation for floating profile image */
 @keyframes floatImage {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-24px);
+    }
+}
+
+/*BREAKPOINTS FOR RESPONSIVE DESIGN */
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+
+    }
+    section{
+        padding: 10rem 3% 2rem;
+
+    }
+    .services{
+        padding-bottom: 7rem;
+
+    }
+    .portofolio{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+
+    }
+    .footer{
+        padding: 2rem 3%;
+
+    }
+}
+
+
+@media (max-width: 768px){
+
+    html{
+        font-size: 50%;
+
+    }
+
+    #menu-icon{
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        padding: 1rem 3%;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        display: none;   
+
+    }
+
+    .navbar.active{
+        display: block; /* Show navbar when active */
+    }
+
+    .navbar a{
+        display: block;
+        margin: 3rem 0;
+        font-size: 2rem;
+
+    }
+
+    .home{
+        flex-direction: column;
+        padding: 70px 3% 0;
+        margin-top: 7rem;
+
+
+    }
+
+
+    .home-content h3{
+        font-size: 2.6rem;
+        margin-bottom: 1rem;
+    }
+    .home-content h1{
+        font-size: 4.5rem;
+    }
+    .home-img img{
+        width: 50vw;
+        height: auto;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about img{
+        width: 70vw;
+        height: auto;
+        margin-top: 4rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .portofolio h2{
+        margin-bottom: 3rem;
+    }
+    .portofolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact form{
+        width: 100%;
+    }
+    .contact form .input-box input{
+        width: 100% ;
+    }
+    .contact form textarea{
+        height: 10rem;}
+    .footer{
+        text-align: center;
+        font-size: 1.4rem;  }
+}
+
+@media (max-width: 617px){
+    .portofolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    } 
+
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    .portofolio-container{
+        grid-template-columns: 1fr;
+    }
+    .about img{
+        width: 90vw;
+        height: auto;
+        margin-top: 4rem;
+    }
+    .contact form .input-box input{
+        width: 100% ;
+
+    }
+    .home-content h1{
+        font-size: 3.8rem;
+        margin-bottom: 1rem;
+    }
+    .home-content h3{
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+}
+@media (max-width: 365px){
+    html{
+        font-size: 45%;
+    }
+    .home-img img{
+        width: 90vw;
+        height: auto;
+        margin-top: 4rem;  
+    }
+    .about-img img{
+        width: 90vw;
+        height: auto;
+        margin-top: 4rem;
+    }
+    .footer{
+        flex-direction: column-rever se;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .footer-right{
+        margin-bottom: 1rem;
     }
 }
